@@ -7,7 +7,8 @@ async function fetchTranscriptions() {
   try {
 
     const sanitizedAudioId = audioId.replace(/-/g, "");
-    const response = await fetch(`http://localhost:8000/api/transcriptions/${sanitizedAudioId}`);
+    // const response = await fetch(`http://localhost:8000/api/transcriptions/${sanitizedAudioId}`);
+    const response = await fetch(`https://telelyzer-transcript-feedback.onrender.com/api/transcriptions/${sanitizedAudioId}`);
     const data = await response.json();
     transcriptions = data;
     renderTranscriptions();
@@ -19,7 +20,7 @@ async function fetchTranscriptions() {
 // Function to update transcription
 async function updateTranscription(chunkId, newTranscript, originalTranscript) {
   try {
-    const response = await fetch(`http://localhost:8000/api/transcriptions/${audioId}/${chunkId}`, {
+    const response = await fetch(`https://telelyzer-transcript-feedback.onrender.com/api/transcriptions/${audioId}/${chunkId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
