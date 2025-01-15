@@ -31,7 +31,11 @@ app = FastAPI()
 # Enable CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://telelyzer-transcript-feedback-git-main-atharva-maskars-projects.vercel.app",
+        "https://telelyzer-transcript-feedback-qdox4xx2f.vercel.app"
+        "http://localhost:3000",  # Add localhost for local development
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
