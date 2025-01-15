@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Transcription App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        #audioIdInput {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #fetchButton {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #fetchButton:hover {
+            background-color: #45a049;
+        }
+        #transcriptionList {
+            margin-top: 20px;
+        }
+        .transcription-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .transcription-item textarea {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .save-button {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .save-button:hover {
+            background-color: #007B9A;
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .original-transcript {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Audio Transcription App</h1>
+        <input type="text" id="audioIdInput" placeholder="Enter Audio ID">
+        <button id="fetchButton">Fetch Transcriptions</button>
+        <div id="transcriptionList"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
